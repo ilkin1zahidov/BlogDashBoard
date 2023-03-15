@@ -617,10 +617,6 @@ export const mockGeographyData = [
     value: 432239,
   },
   {
-    id: "ARM",
-    value: 288305,
-  },
-  {
     id: "ATA",
     value: 415648,
   },
