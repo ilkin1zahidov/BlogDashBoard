@@ -1,5 +1,5 @@
 import React from 'react';
-
+import User from "../../assets/img/user.png"
 const ChatSearch = () => {
   return (
     <div className='chatSearch'>
@@ -7,7 +7,7 @@ const ChatSearch = () => {
         <input type="text" placeholder='Find a user' />
       </div>
       <div className="userChat">
-          <img src="http://localhost:3001/static/media/user.16d4e32ca122e2c539cc.png" alt="" />
+          <img src={User} alt="" />
           <div className="userChatInfo">
             <span className='name'>Ilkin</span>
           </div>
