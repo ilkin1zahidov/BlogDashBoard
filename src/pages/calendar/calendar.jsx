@@ -14,7 +14,7 @@ import {
   useTheme,
 } from "@mui/material";
 
-import Header from "../../components/progress/Header";
+import Header from "../../components/Common/Header";
 import { tokens } from "../../theme";
 
 const Calendar = () => {
