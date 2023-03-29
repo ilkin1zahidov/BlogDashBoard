@@ -1,19 +1,22 @@
 import {ColorModeContext, useMode} from "./theme";
 import {CssBaseline, ThemeProvider} from "@mui/material";
 import {Routes, Route} from "react-router-dom"
-import Topbar from "./scenes/global/Topbar";
-import Sidebar from "./scenes/global/Sidebar";
-import Dashboard from "./scenes/dashboard";
-import Team from "./scenes/team";
-import Invoices from "./scenes/invoices";
-import Contacts from "./scenes/contacts";
-import Form from "./scenes/form";
-import Calendar from "./scenes/calendar";
-import FAQ from "./scenes/faq";
-import Bar from "./scenes/bar";
-import Pie from "./scenes/pie";
-import Line from "./scenes/line";
-import Geography from "./scenes/geography";
+import Topbar from "./pages/global/Topbar";
+import Sidebar from "./pages/global/Sidebar";
+import Dashboard from "./pages/dashboard/dashboard";
+import Team from "./pages/team/team";
+import Invoices from "./pages/invoices/invoices";
+import Contacts from "./pages/contacts/contacts";
+import Form from "./pages/form/form";
+import Calendar from "./pages/calendar/calendar";
+import FAQ from "./pages/faq/faq";
+import Bar from "./pages/bar/bar";
+import Pie from "./pages/pie/pie";
+import Line from "./pages/line/line";
+import Geography from "./pages/geography/goeography";
+import Register from "./pages/ChatRegister/ChatRegister";
+import Login from "./pages/ChatLogin/ChatLogin";
+import ChatHome from "./pages/ChatHome/ChatHome";
 
 
 function App() {
@@ -37,7 +40,10 @@ function App() {
                <Route path="/bar" element={<Bar />} />
                <Route path="/pie" element={<Pie />} />
                <Route path="/line" element={<Line />} />
-               <Route path="/geography" element={<Geography />} />  
+               <Route path="/geography" element={<Geography />} /> 
+               <Route path= "/register" element={<Register/>} /> 
+               <Route path= "/login" element={<Login/>}/>
+               <Route path= "/chatHome" element={<ChatHome/>} />
         </Routes>
       </main>
     </div>

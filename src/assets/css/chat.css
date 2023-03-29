@@ -1,0 +1,163 @@
+.formContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formContainer .formWrapper {
+  background-color: whitesmoke;
+  padding: 20px 60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  color: #000;
+}
+.formContainer .formWrapper .logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+.formContainer .formWrapper .title {
+  font-size: 12px;
+}
+.formContainer .formWrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.formContainer .formWrapper form input {
+  width: 250px;
+  padding: 15px;
+  border: none;
+  border-bottom: #7b96ec 1px solid;
+  background-color: whitesmoke;
+  outline: none;
+}
+.formContainer .formWrapper form input::-moz-placeholder {
+  color: rgb(175, 175, 175);
+}
+.formContainer .formWrapper form input::placeholder {
+  color: rgb(175, 175, 175);
+}
+.formContainer .formWrapper form label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #8da4f1;
+  font-size: 12px;
+  cursor: pointer;
+}
+.formContainer .formWrapper form label img {
+  width: 32px;
+}
+.formContainer .formWrapper form button {
+  background-color: #7b96ec;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.formContainer .formWrapper .login_text {
+  color: #5d5b8d;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.chatHome {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chatHome .container {
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  width: 65%;
+  height: 80%;
+  display: flex;
+  overflow: hidden;
+}
+.chatHome .container .chatSideBar {
+  flex: 1;
+  background-color: #3e3c61;
+}
+.chatHome .container .chatSideBar .chatNavbar {
+  display: flex;
+  align-items: center;
+  background-color: #2f2d52;
+  height: 50px;
+  padding: 10px;
+  justify-content: space-between;
+  color: #ddddf7;
+}
+.chatHome .container .chatSideBar .chatNavbar .logo {
+  font-weight: bold;
+}
+.chatHome .container .chatSideBar .chatNavbar .user {
+  display: flex;
+  gap: 10px;
+}
+.chatHome .container .chatSideBar .chatNavbar .user img {
+  background-color: #ddddf7;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.chatHome .container .chatSideBar .chatNavbar .user button {
+  background-color: #5d5b8d;
+  color: #ddddf7;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+}
+.chatHome .container .chatSideBar .chatSearch {
+  border-bottom: 1px solid gray;
+}
+.chatHome .container .chatSideBar .chatSearch .searchForm {
+  padding: 10px;
+}
+.chatHome .container .chatSideBar .chatSearch .searchForm input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+}
+.chatHome .container .chatSideBar .chatSearch .searchForm input::-moz-placeholder {
+  color: lightgray;
+}
+.chatHome .container .chatSideBar .chatSearch .searchForm input::placeholder {
+  color: lightgray;
+}
+.chatHome .container .chatSideBar .userChat {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  cursor: pointer;
+}
+.chatHome .container .chatSideBar .userChat:hover {
+  background-color: #2f2d52;
+}
+.chatHome .container .chatSideBar .userChat img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.chatHome .container .chatSideBar .userChat .userChatInfo .name {
+  font-size: 18px;
+  font-weight: 500;
+}
+.chatHome .container .chatSideBar .userChat .userChatInfo .status {
+  font-size: 14px;
+  color: lightgray;
+}
+.chatHome .container .chat {
+  flex: 2;
+}/*# sourceMappingURL=chat.css.map */
