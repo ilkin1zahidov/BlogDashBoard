@@ -160,4 +160,13 @@
 }
 .chatHome .container .chat {
   flex: 2;
+}
+.chatHome .container .chat .chatInfo {
+  height: 50px;
+  background-color: #5d5b8d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: lightgray;
 }/*# sourceMappingURL=chat.css.map */
