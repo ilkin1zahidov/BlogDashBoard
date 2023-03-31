@@ -1,6 +1,6 @@
 import {ColorModeContext, useMode} from "./theme";
 import {CssBaseline, ThemeProvider} from "@mui/material";
-import {Routes, Route} from "react-router-dom"
+import {Routes, Route, Navigate} from "react-router-dom"
 import Topbar from "./pages/global/Topbar";
 import Sidebar from "./pages/global/Sidebar";
 import Dashboard from "./pages/dashboard/dashboard";
@@ -17,11 +17,18 @@ import Geography from "./pages/geography/goeography";
 import Register from "./pages/ChatRegister/ChatRegister";
 import Login from "./pages/ChatLogin/ChatLogin";
 import ChatHome from "./pages/ChatHome/ChatHome";
-
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
 
 function App() {
   const [theme, colorMode] = useMode();
-  
+  const {currentUser} =  useContext(AuthContext)
+  const ProtectedRoute = ({children}) =>{
+    if(!currentUser){
+      return <Navigate to="/login"/>
+    }
+    return children
+  };
   return (<ColorModeContext.Provider value = {colorMode}>
     <ThemeProvider theme = {theme}>
      <CssBaseline />
@@ -41,9 +48,18 @@ function App() {
                <Route path="/pie" element={<Pie />} />
                <Route path="/line" element={<Line />} />
                <Route path="/geography" element={<Geography />} /> 
-               <Route path= "/register" element={<Register/>} /> 
-               <Route path= "/login" element={<Login/>}/>
-               <Route path= "/chatHome" element={<ChatHome/>} />
+
+                <Route path = "/">
+                <Route 
+                  index
+                  element={
+                  <ProtectedRoute>
+                   <ChatHome/>
+                  </ProtectedRoute>} />
+                <Route path= "/register" element={<Register/>} /> 
+                <Route path= "/login" element={<Login/>}/>
+                </Route>
+          
         </Routes>
       </main>
     </div>
