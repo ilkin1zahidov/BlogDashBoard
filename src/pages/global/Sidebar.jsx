@@ -17,7 +17,8 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import pageLogo from "../../assets/img/skote.png";
-import User from "../../assets/img/user.png"
+import User from "../../assets/img/user.png";
+import ChatIcon from '@mui/icons-material/Chat';
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -169,6 +170,13 @@ const Sidebar = () => {
               title="Profile Form"
               to="/form"
               icon={<PersonOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+             <Item
+              title="Chat"
+              to="/login"
+              icon={<ChatIcon />}
               selected={selected}
               setSelected={setSelected}
             />

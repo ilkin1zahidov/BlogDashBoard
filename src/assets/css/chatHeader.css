@@ -1,0 +1,8 @@
+.emailHeader {
+  padding: 16px;
+}
+.emailHeader .header_left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=chatHeader.css.map */

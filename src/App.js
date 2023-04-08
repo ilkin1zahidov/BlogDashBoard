@@ -19,6 +19,9 @@ import Login from "./pages/ChatLogin/ChatLogin";
 import ChatHome from "./pages/ChatHome/ChatHome";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
+import EmailHome from "./pages/EmailHome/EmailHome";
+import Mail from "./pages/mail/Mail";
+import EmailList from "./components/Email/EmailList";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -48,9 +51,8 @@ function App() {
                <Route path="/pie" element={<Pie />} />
                <Route path="/line" element={<Line />} />
                <Route path="/geography" element={<Geography />} /> 
-
-                <Route path = "/">
-                <Route 
+               <Route 
+                  path="/chatHome"
                   index
                   element={
                   <ProtectedRoute>
@@ -58,8 +60,9 @@ function App() {
                   </ProtectedRoute>} />
                 <Route path= "/register" element={<Register/>} /> 
                 <Route path= "/login" element={<Login/>}/>
-                </Route>
-          
+                <Route path = "/emailHome" element={<EmailHome/>} />
+              
+                 
         </Routes>
       </main>
     </div>

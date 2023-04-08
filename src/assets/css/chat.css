@@ -1,3 +1,8 @@
+body {
+  width: 100%;
+  height: 100vh;
+}
+
 .formContainer {
   height: 100vh;
   display: flex;
@@ -66,16 +71,12 @@
 }
 
 .chatHome {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 90vh;
 }
 .chatHome .container {
-  border: 1px solid whitesmoke;
-  border-radius: 10px;
-  width: 65%;
-  height: 80%;
+  width: 100%;
+  height: 90vh;
   display: flex;
   overflow: hidden;
 }

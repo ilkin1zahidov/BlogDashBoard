@@ -6,7 +6,7 @@ const ChatNavbar = () => {
   const {currentUser} = useContext(AuthContext)
   return (
     <div className='chatNavbar'>
-      <span className="logo">SKOTE Chat</span>
+      <h2 style={{fontWeight:"bold"}} className="logo">CHAT</h2>
       <div className="user">
         <img src={currentUser.photoURL} alt="users" />
         <span>{currentUser.displayName}</span>

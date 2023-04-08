@@ -15,7 +15,7 @@ const Login = () => {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/")
+      navigate("/chatHome")
     } catch (err) {
       setErr(true);
     }
