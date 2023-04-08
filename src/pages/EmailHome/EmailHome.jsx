@@ -11,9 +11,9 @@ const EmailHome = () => {
          <EmailHeader/> 
          <div className="email_Side">
          <EmailSideBar/>
-          <div className="email_body">
+       
           <EmailList/>
-          </div>
+          
    
          </div>
    
