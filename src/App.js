@@ -21,7 +21,8 @@ import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import EmailHome from "./pages/EmailHome/EmailHome";
 import Mail from "./pages/mail/Mail";
-import EmailList from "./components/Email/EmailList";
+import SendEmail from "./components/Email/SendEmail";
+
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -61,8 +62,7 @@ function App() {
                 <Route path= "/register" element={<Register/>} /> 
                 <Route path= "/login" element={<Login/>}/>
                 <Route path = "/emailHome" element={<EmailHome/>} />
-              
-                 
+                <Route path = "/mail" element= {<Mail/>} />  
         </Routes>
       </main>
     </div>

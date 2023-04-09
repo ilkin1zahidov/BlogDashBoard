@@ -1,1 +1,1 @@
-{"version":3,"sources":["../sass/emailList.scss","emailList.css"],"names":[],"mappings":"AAAA;EACI,OAAA;EACA,gBAAA;ACCJ;ADAI;EACI,gBAAA;EACA,MAAA;EACA,aAAA;EACA,8BAAA;ACER","file":"emailList.css"}
+{"version":3,"sources":["../sass/emailList.scss","emailList.css"],"names":[],"mappings":"AAAA;EACI,OAAA;EACA,gBAAA;ACCJ;ADAI;EACI,gBAAA;EACA,MAAA;EACA,aAAA;EACA,8BAAA;EACA,mCAAA;EACA,YAAA;EACA,mBAAA;ACER;ADAQ;EACI,gBAAA;EACA,MAAA;EACA,aAAA;EACA,mCAAA;EACA,YAAA;ACEZ","file":"emailList.css"}

@@ -4,7 +4,18 @@
     .emailList_settings{
         position: sticky;
         top: 0;
-        display: flex;
+        display: flex ;
         justify-content: space-between;
+        border-bottom: 1px solid whitesmoke;
+        z-index: 999;
+        padding-right: 10px;
+
+        .emailList_sections{
+            position: sticky;
+            top: 0;
+            display: flex ;
+            border-bottom:1px solid whitesmoke;
+            z-index: 999;
+        }
     }
 }
