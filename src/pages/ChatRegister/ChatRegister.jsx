@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Add from "../../assets/img/addAvatar.png";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth,db, storage } from "../../firebase";
+import { auth,db, storage } from "../../firebase/ChatFirebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
@@ -9,7 +9,7 @@ import { useNavigate, Link } from "react-router-dom";
 const Register = () => {
   const [err, setErr] = useState(false);
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  const navigate = useNavigate("/login");
 
   const handleSubmit = async (e) => {
     setLoading(true);

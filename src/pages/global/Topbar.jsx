@@ -1,4 +1,4 @@
-import { Box, IconButton, useTheme } from "@mui/material";
+import { Box, IconButton, useTheme,Avatar } from "@mui/material";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
 import InputBase from "@mui/material/InputBase";
@@ -6,13 +6,27 @@ import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
+import { useDispatch, useSelector } from "react-redux";
+import { auth } from "../../firebase/EmailFireBase";
+import { logout, selectUser } from "../../control/userSlice";
+
 
 const Topbar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
+  
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  const signOut = () => {
+      auth.signOut().then(() => {
+          dispatch(logout());
+      });
+  };
+
+
 
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
@@ -44,7 +58,9 @@ const Topbar = () => {
           <SettingsOutlinedIcon />
         </IconButton>
         <IconButton>
-          <PersonOutlinedIcon />
+        <div className = "header__rightAvatar">
+          <Avatar onClick = {signOut} src = {user?.photoUrl} />
+           </div>
         </IconButton>
       </Box>
     </Box>

@@ -1,0 +1,15 @@
+.emailLogin{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    .login_container{
+        display: flex;
+        flex-direction: column;
+        img{
+            object-fit: contain;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+    
+    }
+}

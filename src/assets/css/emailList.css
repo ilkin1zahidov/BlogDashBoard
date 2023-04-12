@@ -1,6 +1,14 @@
 .emailList {
+  width: 100%;
+  height: 80vh;
   flex: 1;
-  overflow: scroll;
+  overflow: hidden;
+}
+.emailList ::-webkit-scrollbar {
+  display: none;
+}
+.emailList .emailList_list {
+  padding-bottom: 20%;
 }
 .emailList .emailList_settings {
   position: sticky;

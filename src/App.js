@@ -62,7 +62,8 @@ function App() {
                 <Route path= "/register" element={<Register/>} /> 
                 <Route path= "/login" element={<Login/>}/>
                 <Route path = "/emailHome" element={<EmailHome/>} />
-                <Route path = "/mail" element= {<Mail/>} />  
+                <Route path = "/mail" element= {<Mail/>} /> 
+                <Route path = "/sendMail" elemnt={<SendEmail/>} />
         </Routes>
       </main>
     </div>
