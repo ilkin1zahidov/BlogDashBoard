@@ -12,11 +12,11 @@ root.render(
   <AuthContextProvider>
     <ChatContextProvider>
       <React.StrictMode>
+      <Provider store={store}>
         <BrowserRouter>
-          <Provider store={store}>
             <App />
-          </Provider>
         </BrowserRouter>
+        </Provider>
       </React.StrictMode>
     </ChatContextProvider>
   </AuthContextProvider>
