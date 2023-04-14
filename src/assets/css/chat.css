@@ -183,7 +183,7 @@ body {
 }
 .chatHome .container .chat .chatInfo {
   height: 50px;
-  background-color: #263c6e;
+  background-color: #182237 !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -199,10 +199,10 @@ body {
   cursor: pointer;
 }
 .chatHome .container .chat .messages {
-  background-color: #1d2b4b;
   padding: 10px;
   height: calc(100% - 160px);
   overflow: auto;
+  background-color: #1F2A40 !important;
 }
 .chatHome .container .chat .messages::-webkit-scrollbar {
   width: 5px;

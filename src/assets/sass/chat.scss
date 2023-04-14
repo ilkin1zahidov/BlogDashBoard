@@ -207,9 +207,11 @@ body{
         .chat{
             flex: 2;
             margin-left: 15px;
+        
+          
             .chatInfo{
                 height: 50px;
-                background-color: #263c6e;
+                background-color: #182237!important;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -228,10 +230,11 @@ body{
             }
 
             .messages{
-                background-color: #1d2b4b;
+                
                 padding: 10px;
                 height: calc(100% - 160px);
                 overflow: auto;
+                background-color: #1F2A40!important;
                 &::-webkit-scrollbar{
                     width:5px;
                     background-color:#000;
