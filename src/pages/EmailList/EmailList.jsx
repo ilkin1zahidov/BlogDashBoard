@@ -1,23 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "../../assets/css/emailList.css";
 import { Checkbox, IconButton } from "@mui/material";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import RedoIcon from "@mui/icons-material/Redo";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import SettingsIcon from "@mui/icons-material/Settings";
-import KeyboardHideIcon from "@mui/icons-material/KeyboardHide";
-import Section from "../../components/Email/Section";
-import InboxIcon from "@mui/icons-material/Inbox";
-import PeopleIcon from "@mui/icons-material/People";
-import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import { Box, useTheme } from "@mui/material";
+import { tokens } from "../../theme";
+import InputBase from "@mui/material/InputBase";
+import SearchIcon from "@mui/icons-material/Search";
 import EmailRow from "../../components/Email/EmailRow";
 import { db } from "../../firebase/EmailFireBase";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
+
 const EmailList = () => {
   const [emails, setEmails] = useState([]);
-
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   useEffect(() => {
     const q = query(collection(db, "emails"), orderBy("timestamp", "desc"));
     const unsubscribe = onSnapshot(q, (snapshot) => {
@@ -30,37 +25,23 @@ const EmailList = () => {
   return (
     <div className="emailList">
       <div className="emailList_settings">
-        <div className="emailList_settingsLeft">
           <Checkbox />
-          <IconButton>
-            <ArrowDropDownIcon />
-          </IconButton>
-          <IconButton>
-            <RedoIcon />
-          </IconButton>
-          <IconButton>
-            <MoreVertIcon />
-          </IconButton>
-        </div>
-        <div className="emailList_settingsRight">
-          <IconButton>
-            <ChevronLeftIcon />
-          </IconButton>
-          <IconButton>
-            <ChevronRightIcon />
-          </IconButton>
-          <IconButton>
-            <KeyboardHideIcon />
-          </IconButton>
-          <IconButton>
-            <SettingsIcon />
-          </IconButton>
-        </div>
-        <div className="emailList_sections">
-          <Section Icon={InboxIcon} title="primary" color="red" selected />
-          <Section Icon={PeopleIcon} title="Social" color="#1A73E8" />
-          <Section Icon={LocalOfferIcon} title="Promotions" color="green" />
-        </div>
+        <Box display="flex" justifyContent="end" p={2}>
+      {/* SEARCH BAR */}
+      <Box
+        display="flex"
+        flexDirection={'row-reverse'}
+        backgroundColor={colors.primary[400]}
+        borderRadius="3px"
+      >
+        <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
+        <IconButton type="button" sx={{ p: 1 }}>
+          <SearchIcon />
+        </IconButton>
+      </Box>
+
+    
+    </Box>
       </div>
 
       <div className="emailList_list">

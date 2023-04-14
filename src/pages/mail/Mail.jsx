@@ -29,26 +29,6 @@ const Mail = () => {
           </IconButton>
 
           <IconButton>
-            <MoveToInboxIcon />
-          </IconButton>
-
-          <IconButton>
-            <ErrorIcon />
-          </IconButton>
-
-          <IconButton>
-            <DeleteIcon />
-          </IconButton>
-
-          <IconButton>
-            <EmailIcon />
-          </IconButton>
-
-          <IconButton>
-            <WatchLaterIcon />
-          </IconButton>
-
-          <IconButton>
             <CheckCircleIcon />
           </IconButton>
 

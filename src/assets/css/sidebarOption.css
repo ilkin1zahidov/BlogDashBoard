@@ -7,6 +7,7 @@
   border-bottom-right-radius: 20px;
   cursor: pointer;
   color: #818181;
+  position: relative;
 }
 .sidebarOption .title {
   flex: 1;
@@ -28,8 +29,8 @@
 .sidebarOption--active,
 .sidebarOption--active > .number,
 .sidebarOption--active > .title {
-  background-color: #fcecec;
-  color: #c04b37;
+  background-color: transparent;
+  color: #6870fa;
   font-weight: 800 !important;
 }
 
@@ -39,4 +40,16 @@
 
 .sidebarOption:hover > .title {
   display: inline;
+}
+
+.sidebarOption--active {
+  position: relative;
+}
+.sidebarOption--active:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #6870fa;
+  width: 210px;
+  top: 38px;
+  left: -5px;
 }/*# sourceMappingURL=sidebarOption.css.map */

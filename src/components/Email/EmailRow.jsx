@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../assets/css/emailRow.css";
 import { Checkbox, IconButton } from "@mui/material";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
@@ -6,10 +6,13 @@ import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { selectMail } from "../../control/mailSlice";
+import StarIcon from "@mui/icons-material/Star";
 
 const EmailRow = ({ id, title, subject, description, time }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const [starred, setStarred] = useState(false);
 
   const openMail = () => {
     dispatch(
@@ -24,12 +27,20 @@ const EmailRow = ({ id, title, subject, description, time }) => {
 
     navigate("/mail")
   };
+
+  const handleStarClick = (e) => {
+    e.stopPropagation();
+    setStarred(!starred);
+  };
+
+
+
   return (
     <div onClick = {openMail} className="emailRow">
       <div className="emailRow_options">
         <Checkbox />
-        <IconButton>
-          <StarBorderIcon />
+        <IconButton  onClick={handleStarClick}>
+          {starred ? <StarIcon/> : <StarBorderIcon/>}
         </IconButton>
         <IconButton>
           <LabelImportantIcon />
@@ -48,4 +59,5 @@ const EmailRow = ({ id, title, subject, description, time }) => {
     </div>
   );
 };
+
 export default EmailRow;

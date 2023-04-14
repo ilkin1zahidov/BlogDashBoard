@@ -87,13 +87,12 @@ body {
 }
 .chatHome .container .chatSideBar {
   flex: 1;
-  background-color: #3e3c61;
   position: relative;
+  margin-left: 15px;
 }
 .chatHome .container .chatSideBar .chatNavbar {
   display: flex;
   align-items: center;
-  background-color: #2f2d52;
   height: 50px;
   padding: 10px;
   justify-content: space-between;
@@ -113,18 +112,20 @@ body {
 }
 .chatHome .container .chatSideBar .chatNavbar .user img {
   background-color: #ddddf7;
-  height: 24px;
-  width: 24px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .chatHome .container .chatSideBar .chatNavbar .user button {
-  background-color: #5d5b8d;
+  background-color: red;
   color: #ddddf7;
   font-size: 10px;
   border: none;
   cursor: pointer;
+  padding: 0px 10px;
+  border-radius: 4px;
 }
 @media screen and (max-width: 768px) {
   .chatHome .container .chatSideBar .chatNavbar .user button {
@@ -132,22 +133,22 @@ body {
     bottom: 10px;
   }
 }
-.chatHome .container .chatSideBar .chatSearch {
+.chatHome .container .chatSideBar .search {
   border-bottom: 1px solid gray;
 }
-.chatHome .container .chatSideBar .chatSearch .searchForm {
+.chatHome .container .chatSideBar .search .searchForm {
   padding: 10px;
 }
-.chatHome .container .chatSideBar .chatSearch .searchForm input {
+.chatHome .container .chatSideBar .search .searchForm input {
   background-color: transparent;
   border: none;
   color: white;
   outline: none;
 }
-.chatHome .container .chatSideBar .chatSearch .searchForm input::-moz-placeholder {
+.chatHome .container .chatSideBar .search .searchForm input::-moz-placeholder {
   color: lightgray;
 }
-.chatHome .container .chatSideBar .chatSearch .searchForm input::placeholder {
+.chatHome .container .chatSideBar .search .searchForm input::placeholder {
   color: lightgray;
 }
 .chatHome .container .chatSideBar .userChat {
@@ -159,7 +160,7 @@ body {
   cursor: pointer;
 }
 .chatHome .container .chatSideBar .userChat:hover {
-  background-color: #2f2d52;
+  background-color: #8da4f1;
 }
 .chatHome .container .chatSideBar .userChat img {
   width: 50px;
@@ -178,10 +179,11 @@ body {
 }
 .chatHome .container .chat {
   flex: 2;
+  margin-left: 15px;
 }
 .chatHome .container .chat .chatInfo {
   height: 50px;
-  background-color: #5d5b8d;
+  background-color: #263c6e;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -197,10 +199,14 @@ body {
   cursor: pointer;
 }
 .chatHome .container .chat .messages {
-  background-color: #ddddf7;
+  background-color: #1d2b4b;
   padding: 10px;
   height: calc(100% - 160px);
-  overflow: scroll;
+  overflow: auto;
+}
+.chatHome .container .chat .messages::-webkit-scrollbar {
+  width: 5px;
+  background-color: #000;
 }
 .chatHome .container .chat .messages .message {
   display: flex;

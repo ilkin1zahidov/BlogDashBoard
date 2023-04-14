@@ -3,6 +3,9 @@
   height: 80vh;
   flex: 1;
   overflow: hidden;
+  margin-left: 20px;
+  border: 1px solid #1F2A40;
+  background-color: #1F2A40;
 }
 .emailList ::-webkit-scrollbar {
   display: none;
@@ -18,6 +21,7 @@
   border-bottom: 1px solid whitesmoke;
   z-index: 999;
   padding-right: 10px;
+  align-items: center;
 }
 .emailList .emailList_settings .emailList_sections {
   position: sticky;
