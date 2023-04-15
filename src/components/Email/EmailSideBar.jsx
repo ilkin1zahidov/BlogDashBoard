@@ -20,21 +20,19 @@ function EmailSideBar() {
   const [chats, setChats] = useState([]);
   const { currentUser } = useContext(AuthContext);
   const { dispatch: chatDispatch } = useContext(ChatContext);
-
   useEffect(() => {
     const getChats = () => {
-      if (!currentUser) {
-        return;
-      }
       const unsub = onSnapshot(doc(db, "userChats", currentUser.uid), (doc) => {
         setChats(doc.data());
       });
+
       return () => {
         unsub();
       };
     };
-    getChats();
-  }, [currentUser]);
+
+    currentUser.uid && getChats();
+  }, [currentUser.uid]);
 
   const handleSelect = (u) => {
     chatDispatch({ type: "CHANGE_USER", payload: u });
