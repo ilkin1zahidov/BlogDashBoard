@@ -160,7 +160,7 @@ body {
   cursor: pointer;
 }
 .chatHome .container .chatSideBar .userChat:hover {
-  background-color: #8da4f1;
+  background-color: #1F2A40;
 }
 .chatHome .container .chatSideBar .userChat img {
   width: 50px;
@@ -259,36 +259,38 @@ body {
   background-color: white;
   padding: 10px;
   color: #000;
+}
+.chatHome .container .chat .input form {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.chatHome .container .chat .input input {
+.chatHome .container .chat .input form input {
   width: 100%;
   border: none;
   outline: none;
   color: #2f2d52;
   font-size: 18px;
 }
-.chatHome .container .chat .input input::-moz-placeholder {
+.chatHome .container .chat .input form input::-moz-placeholder {
   color: lightgray;
 }
-.chatHome .container .chat .input input::placeholder {
+.chatHome .container .chat .input form input::placeholder {
   color: lightgray;
 }
-.chatHome .container .chat .input .send {
+.chatHome .container .chat .input form .send {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.chatHome .container .chat .input .send img {
+.chatHome .container .chat .input form .send img {
   height: 24px;
   cursor: pointer;
 }
-.chatHome .container .chat .input .send button {
+.chatHome .container .chat .input form .send button {
   border: none;
   padding: 10px 15px;
   color: white;
-  background-color: #8da4f1;
+  background-color: #141b2d;
   cursor: pointer;
 }/*# sourceMappingURL=chat.css.map */
