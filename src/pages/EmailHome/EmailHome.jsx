@@ -14,18 +14,19 @@ const EmailHome = () => {
   const {user} = useSelector((store)=>store.user);
   const dispatch = useDispatch();
 
-  useEffect(()=> {
-    auth.onAuthStateChanged(user => {
-      if(user) {
-        // the user is logged in
-        dispatch(login({
-          displayName:user.displayName,
-            email:user.email,
-          photoUrl:user.photoURL
-        }))
-      }
-    })
-  },[])
+useEffect(() => {
+  auth.onAuthStateChanged(user => {
+    if (user) {
+      // the user is logged in
+      dispatch(login({
+        displayName: user.displayName,
+        email: user.email,
+        photoUrl: user.photoURL
+      }))
+    }
+  })
+}, [dispatch])
+
 
   return (
     <>  

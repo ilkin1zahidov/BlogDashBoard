@@ -176,7 +176,7 @@ const Sidebar = () => {
             />
              <Item
               title="Chat"
-              to="/login"
+              to="/chatHome"
               icon={<ChatIcon />}
               selected={selected}
               setSelected={setSelected}
