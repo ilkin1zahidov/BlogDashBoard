@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "../../assets/css/emailRow.css";
 import { Checkbox, IconButton } from "@mui/material";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
@@ -7,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { selectMail } from "../../control/mailSlice";
 import StarIcon from "@mui/icons-material/Star";
+import { useState } from "react";
 
 const EmailRow = ({ id, title, subject, description, time }) => {
   const navigate = useNavigate();
@@ -30,10 +30,20 @@ const EmailRow = ({ id, title, subject, description, time }) => {
 
   const handleStarClick = (e) => {
     e.stopPropagation();
-    setStarred(!starred);
+    setStarred(!starred)
+    const starredMails = JSON.parse(
+      localStorage.getItem("starredMails")
+    ) || [];
+    if (!starred) {
+      starredMails.push({ id, title, subject, description, time });
+      localStorage.setItem("starredMails", JSON.stringify(starredMails));
+ 
+    } else {
+      const newStarredMails = starredMails.filter((mail) => mail.id!== id);
+      console.log(newStarredMails);
+      localStorage.setItem("starredMails", JSON.stringify(newStarredMails));
+    }
   };
-
-
 
   return (
     <div onClick = {openMail} className="emailRow">

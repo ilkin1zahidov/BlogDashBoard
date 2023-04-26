@@ -15,12 +15,13 @@ import { AuthContext } from "../../context/AuthContext";
 import { ChatContext } from "../../context/ChatContext";
 import { db } from "../../firebase/ChatFirebase";
 
+
 function EmailSideBar() {
   const dispatch = useDispatch();
   const [chats, setChats] = useState([]);
   const { currentUser } = useContext(AuthContext);
   const { dispatch: chatDispatch } = useContext(ChatContext);
-  
+
 useEffect(() => {
   const getChats = () => {
     if (currentUser) {
@@ -55,7 +56,11 @@ useEffect(() => {
           number={"(10)"}
           selected={true}
         />
+
+    
         <SidebarOption Icon={StarIcon} title="Starred" number={54} />
+    
+
         <SidebarOption Icon={DiamondIcon} title="Important" number={54} />
         <SidebarOption Icon={NoteIcon} title="Drafts" number={54} />
         <SidebarOption Icon={MarkEmailReadIcon} title="Sent" number={54} />

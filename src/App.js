@@ -22,6 +22,7 @@ import { AuthContext } from "./context/AuthContext";
 import EmailHome from "./pages/EmailHome/EmailHome";
 import Mail from "./pages/mail/Mail";
 import SendEmail from "./components/Email/SendEmail";
+import StarredMails from "./pages/StarredMails/StarredMails";
 
 
 
@@ -64,7 +65,8 @@ function App() {
                 <Route path= "/login" element={<Login/>}/>
                 <Route path = "/emailHome" element={<EmailHome/>} />
                 <Route path = "/mail" element= {<Mail/>} /> 
-                <Route path = "/sendMail" elemnt={<SendEmail/>} />
+                <Route path = "/sendMail" element={<SendEmail/>} />
+                <Route path = "/StarMail" element={<StarredMails/>} />
         </Routes>
       </main>
     </div>
