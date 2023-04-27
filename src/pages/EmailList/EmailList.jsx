@@ -37,7 +37,7 @@ const EmailList = () => {
   return (
     <div className="emailList">
       <div className="emailList_settings">
-        <Checkbox />
+        <Checkbox style={{color:"white"}} />
         <Box display="flex" justifyContent="end" p={2}>
           {/* SEARCH BAR */}
           <Box

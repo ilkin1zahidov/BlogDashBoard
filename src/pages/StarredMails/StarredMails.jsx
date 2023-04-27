@@ -25,9 +25,10 @@ const StarMail = () => {
     localStorage.setItem("starredMails", JSON.stringify(newStarredMails));
   };
   const navigate = useNavigate();
+
   return (
     <div className="mail">
-          <div className="mail_tools">
+      <div className="mail_tools">
         <div className="mail_toolsLeft">
           <IconButton onClick={() => navigate("/emailHome")}>
             <ArrowBackIcon />
@@ -61,24 +62,29 @@ const StarMail = () => {
         </div>
       </div>
       <div className="mail_body">
-      <h2 style={{ marginBottom: '20px' }} >Starred Mails</h2 >
-      <div className="mail_header" style={{borderTop: '1px solid whitesmoke'}}>
-    
-      {starredMails.map((mail) => (
-        <EmailRow
-          key={mail.id}
-          id={mail.id}
-          title={mail.title}
-          subject={mail.subject}
-          description={mail.description}
-          time={mail.time}
-          starred={mail.starred}
-          onStarClick={() => handleStarClick(mail.id)}  
-        />
-      ))}
+        <h2 style={{ marginBottom: '20px' }} >Starred Mails</h2 >
+        <div className="mail_header" style={{ borderTop: '1px solid whitesmoke' }}>
+
+          {starredMails.length === 0 ? (
+            <h1 style={{textAlign:"center",color:"orange",marginTop:"20px"}}>No Starred Mails</h1>
+          ) : (
+            starredMails.map((mail) => (
+              <EmailRow
+                key={mail.id}
+                id={mail.id}
+                title={mail.title}
+                subject={mail.subject}
+                description={mail.description}
+                time={mail.time}
+                starred={mail.starred}
+                onStarClick={() => handleStarClick(mail.id)}
+              />
+            ))
+          )}
+
+        </div>
       </div>
-      </div>
-  
+
     </div>
   );
 };

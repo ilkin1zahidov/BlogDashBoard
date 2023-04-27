@@ -11,11 +11,9 @@ import { useState, useEffect } from "react"; // useEffect import edildi
 const EmailRow = ({ id, title, subject, description, time }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   const [starred, setStarred] = useState(false);
 
   useEffect(() => {
-    // EmailRow componenti render edildiğinde, localStorage içindeki starredMails listesinde bu mailin olup olmadığını kontrol ediyoruz.
     const starredMails = JSON.parse(localStorage.getItem("starredMails")) || [];
     const foundMail = starredMails.find((mail) => mail.id === id);
     if (foundMail) {
@@ -56,7 +54,7 @@ const EmailRow = ({ id, title, subject, description, time }) => {
   return (
     <div onClick = {openMail} className="emailRow">
       <div className="emailRow_options">
-        <Checkbox />
+        <Checkbox style={{color:"white"}} />
         <IconButton  onClick={handleStarClick}>
           {starred ? <StarIcon style={{color:"orange"}}/> : <StarBorderIcon/>}
         </IconButton>
@@ -64,16 +62,14 @@ const EmailRow = ({ id, title, subject, description, time }) => {
           <LabelImportantIcon />
         </IconButton>
       </div>
-
       <h3 className="emailRow_title">{title}</h3>
-
       <div className="emailRow_message">
         <h4 className="emailMessage">
           {subject} <span className="emailRow_description">-{description}</span>
         </h4>
       </div>
-
       <p className="emailRow_time">{time}</p>
+      
     </div>
   );
 };
