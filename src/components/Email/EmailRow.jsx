@@ -16,6 +16,7 @@ const EmailRow = ({ id, title, subject, description, time }) => {
   useEffect(() => {
     const starredMails = JSON.parse(localStorage.getItem("starredMails")) || [];
     const foundMail = starredMails.find((mail) => mail && mail.id === id);
+   
     if (foundMail) {
       setStarred(true);
     }
@@ -46,7 +47,7 @@ const EmailRow = ({ id, title, subject, description, time }) => {
       starredMails.push({ id, title, subject, description, time });
       localStorage.setItem("starredMails", JSON.stringify(starredMails));
     } else {
-      const newStarredMails = starredMails.filter((mail) => mail.id!== id);
+      const newStarredMails = starredMails.filter((mail) =>  mail && mail.id!== id);
       console.log(newStarredMails);
       localStorage.setItem("starredMails", JSON.stringify(newStarredMails));
     }
