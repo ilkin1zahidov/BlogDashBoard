@@ -6,13 +6,22 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { selectMail } from "../../control/mailSlice";
 import StarIcon from "@mui/icons-material/Star";
-import { useState } from "react";
+import { useState, useEffect } from "react"; // useEffect import edildi
 
 const EmailRow = ({ id, title, subject, description, time }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [starred, setStarred] = useState(false);
+
+  useEffect(() => {
+    // EmailRow componenti render edildiğinde, localStorage içindeki starredMails listesinde bu mailin olup olmadığını kontrol ediyoruz.
+    const starredMails = JSON.parse(localStorage.getItem("starredMails")) || [];
+    const foundMail = starredMails.find((mail) => mail.id === id);
+    if (foundMail) {
+      setStarred(true);
+    }
+  }, [id]);
 
   const openMail = () => {
     dispatch(
@@ -30,7 +39,7 @@ const EmailRow = ({ id, title, subject, description, time }) => {
 
   const handleStarClick = (e) => {
     e.stopPropagation();
-     setStarred(!starred) 
+    setStarred(!starred);
     const starredMails = JSON.parse(
       localStorage.getItem("starredMails")
     ) || [];
