@@ -58,7 +58,7 @@ const EmailRow = ({ id, title, subject, description, time }) => {
       <div className="emailRow_options">
         <Checkbox />
         <IconButton  onClick={handleStarClick}>
-          {starred ? <StarIcon/> : <StarBorderIcon/>}
+          {starred ? <StarIcon style={{color:"orange"}}/> : <StarBorderIcon/>}
         </IconButton>
         <IconButton>
           <LabelImportantIcon />
