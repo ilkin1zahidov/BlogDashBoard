@@ -14,6 +14,7 @@ import { openSendMessage } from "../../control/mailSlice";
 import { AuthContext } from "../../context/AuthContext";
 import { ChatContext } from "../../context/ChatContext";
 import { db } from "../../firebase/ChatFirebase";
+import { useNavigate } from "react-router-dom";
 
 
 function EmailSideBar() {
@@ -22,6 +23,7 @@ function EmailSideBar() {
   const { currentUser } = useContext(AuthContext);
   const { dispatch: chatDispatch } = useContext(ChatContext);
 
+  const navigate= useNavigate()
 useEffect(() => {
   const getChats = () => {
     if (currentUser) {
@@ -41,6 +43,10 @@ useEffect(() => {
     chatDispatch({ type: "CHANGE_USER", payload: u });
   };
 
+  const StarMail = () => {
+    navigate("/StarMail")
+  }
+
   return (
     <div className="emailSideBar">
       <div className="container">
@@ -56,11 +62,9 @@ useEffect(() => {
           number={"(10)"}
           selected={true}
         />
-
-    
+        <div onClick={StarMail }>
         <SidebarOption Icon={StarIcon} title="Starred" number={54} />
-    
-
+        </div>
         <SidebarOption Icon={DiamondIcon} title="Important" number={54} />
         <SidebarOption Icon={NoteIcon} title="Drafts" number={54} />
         <SidebarOption Icon={MarkEmailReadIcon} title="Sent" number={54} />

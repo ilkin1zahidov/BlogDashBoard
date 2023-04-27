@@ -16,13 +16,10 @@ export const mailSlice = createSlice({
     closeSendMessage: state => {
       state.sendMessageIsOpen = false;
     },
-    setStarredMails: (state, action) => {
-      state.starredMails = action.payload;
-    }
   },
 });
 
-export const { selectMail, openSendMessage, closeSendMessage,setStarredMails } = mailSlice.actions;
+export const { selectMail, openSendMessage, closeSendMessage, } = mailSlice.actions;
 
 export const selectOpenMail = (state) => state.mail.selectedMail;
 

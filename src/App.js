@@ -66,7 +66,7 @@ function App() {
                 <Route path = "/emailHome" element={<EmailHome/>} />
                 <Route path = "/mail" element= {<Mail/>} /> 
                 <Route path = "/sendMail" element={<SendEmail/>} />
-                <Route path = "/StarMail" element={<StarredMails/>} />
+                <Route path = "StarMail" element={<StarredMails/>} />
         </Routes>
       </main>
     </div>

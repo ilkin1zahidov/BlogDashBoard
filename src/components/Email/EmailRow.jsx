@@ -30,14 +30,13 @@ const EmailRow = ({ id, title, subject, description, time }) => {
 
   const handleStarClick = (e) => {
     e.stopPropagation();
-    setStarred(!starred)
+     setStarred(!starred) 
     const starredMails = JSON.parse(
       localStorage.getItem("starredMails")
     ) || [];
     if (!starred) {
       starredMails.push({ id, title, subject, description, time });
       localStorage.setItem("starredMails", JSON.stringify(starredMails));
- 
     } else {
       const newStarredMails = starredMails.filter((mail) => mail.id!== id);
       console.log(newStarredMails);
