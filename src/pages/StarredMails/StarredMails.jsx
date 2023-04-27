@@ -14,9 +14,8 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
 
 const StarMail = () => {
-  const starredMails = JSON.parse(
-    localStorage.getItem("starredMails")
-  ) || [];
+const starredMails = JSON.parse(localStorage.getItem("starredMails")) ?? [];
+
 
   const handleStarClick = (id) => {
     const newStarredMails = starredMails.map((mail) =>

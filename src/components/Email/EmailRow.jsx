@@ -15,11 +15,12 @@ const EmailRow = ({ id, title, subject, description, time }) => {
 
   useEffect(() => {
     const starredMails = JSON.parse(localStorage.getItem("starredMails")) || [];
-    const foundMail = starredMails.find((mail) => mail.id === id);
+    const foundMail = starredMails.find((mail) => mail && mail.id === id);
     if (foundMail) {
       setStarred(true);
     }
   }, [id]);
+  
 
   const openMail = () => {
     dispatch(
