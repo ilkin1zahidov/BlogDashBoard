@@ -71,7 +71,6 @@ const EmailRow = ({ id, title, subject, description, time }) => {
         </h4>
       </div>
       <p className="emailRow_time">{time}</p>
-      
     </div>
   );
 };
