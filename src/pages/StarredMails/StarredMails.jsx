@@ -19,7 +19,7 @@ const starredMails = JSON.parse(localStorage.getItem("starredMails")) ?? [];
 
   const handleStarClick = (id) => {
     const newStarredMails = starredMails.map((mail) =>
-     mail && mail.id === id ? { ...mail, starred: !mail.starred } : mail
+     mail.id === id ? { ...mail, starred: !mail.starred } : mail
     );
     localStorage.setItem("starredMails", JSON.stringify(newStarredMails));
   };
