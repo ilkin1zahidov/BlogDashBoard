@@ -15,9 +15,13 @@ import { AuthContext } from "../../context/AuthContext";
 import { ChatContext } from "../../context/ChatContext";
 import { db } from "../../firebase/ChatFirebase";
 import { useNavigate } from "react-router-dom";
-
+import { Box, useTheme } from "@mui/material";
+import { tokens } from "../../theme";
 
 function EmailSideBar() {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   const dispatch = useDispatch();
   const [chats, setChats] = useState([]);
   const { currentUser } = useContext(AuthContext);
@@ -48,12 +52,18 @@ useEffect(() => {
   }
 
   return (
-    <div className="emailSideBar">
+    <div className="emailSideBar" >
+        <Box
+          sx={{backgroundColor:colors.primary[400],height:'100vh'}} 
+        >
+    
       <div className="container">
+        
         <Button
           className="sidebar_compose"
           onClick={() => dispatch(openSendMessage())}
         >
+    
           Compose
         </Button>
         <SidebarOption
@@ -90,6 +100,7 @@ useEffect(() => {
           </div>
         </div>
       </div>
+      </Box>
     </div>
   );
 }

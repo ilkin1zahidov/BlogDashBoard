@@ -1,10 +1,8 @@
 .emailSideBar {
   flex: 0.3;
-  max-width: 236px;
+  max-width: 255px;
   height: auto;
   padding-right: 20px;
-  border: 1px solid #1F2A40;
-  background-color: #1F2A40;
   margin-left: 30px;
   border-radius: 4px;
 }
@@ -32,12 +30,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: white;
   cursor: pointer;
 }
 .emailSideBar .container .sidebar_footer .userChat:after {
   content: "";
-  border: 1px solid #2a3042;
   position: absolute;
   top: 0;
   width: 200px;
