@@ -114,7 +114,7 @@ body{
                 height:50px;
                 padding: 10px;
                 justify-content: space-between;
-                color:#ddddf7;
+                
 
                 .logo{
                     font-weight: bold;
@@ -160,10 +160,9 @@ body{
                 .searchForm{
                     padding: 10px;
                     input{
-                     
                         background-color: transparent;
                         border:none;
-                        color:white;
+                        color: lightgray;
                         outline: none;
                         &::placeholder{
                             color:lightgray;
@@ -178,11 +177,12 @@ body{
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                color:white;
+     
                 cursor: pointer;
 
                 &:hover{
-                    background-color: #1F2A40 ;
+                    background-color: #192339 ;
+                    color: whitesmoke;
                 }
                 img{
                     width: 50px;
@@ -207,16 +207,16 @@ body{
 
         .chat{
             flex: 2;
-            margin-left: 15px;
+            padding: 5px;
         
           
             .chatInfo{
                 height: 50px;
-                background-color: #182237!important;
+             
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding: 10px;
+       
                 color:lightgray;
             }
 
@@ -232,10 +232,10 @@ body{
 
             .messages{
                 
-                padding: 10px;
+            
                 height: calc(100% - 160px);
                 overflow: auto;
-                background-color: #1F2A40!important;
+         
                 &::-webkit-scrollbar{
                     width:5px;
                     background-color:#000;

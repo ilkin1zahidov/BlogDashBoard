@@ -96,7 +96,6 @@ body {
   height: 50px;
   padding: 10px;
   justify-content: space-between;
-  color: #ddddf7;
 }
 .chatHome .container .chatSideBar .chatNavbar .logo {
   font-weight: bold;
@@ -142,7 +141,7 @@ body {
 .chatHome .container .chatSideBar .search .searchForm input {
   background-color: transparent;
   border: none;
-  color: white;
+  color: lightgray;
   outline: none;
 }
 .chatHome .container .chatSideBar .search .searchForm input::-moz-placeholder {
@@ -156,11 +155,11 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: white;
   cursor: pointer;
 }
 .chatHome .container .chatSideBar .userChat:hover {
-  background-color: #1F2A40;
+  background-color: #192339;
+  color: whitesmoke;
 }
 .chatHome .container .chatSideBar .userChat img {
   width: 50px;
@@ -179,15 +178,13 @@ body {
 }
 .chatHome .container .chat {
   flex: 2;
-  margin-left: 15px;
+  padding: 5px;
 }
 .chatHome .container .chat .chatInfo {
   height: 50px;
-  background-color: #182237 !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
   color: lightgray;
 }
 .chatHome .container .chat .chatIcons {
@@ -199,10 +196,8 @@ body {
   cursor: pointer;
 }
 .chatHome .container .chat .messages {
-  padding: 10px;
   height: calc(100% - 160px);
   overflow: auto;
-  background-color: #1F2A40 !important;
 }
 .chatHome .container .chat .messages::-webkit-scrollbar {
   width: 5px;

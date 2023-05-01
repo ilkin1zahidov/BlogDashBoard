@@ -9,6 +9,7 @@ import EmailRow from "../../components/Email/EmailRow";
 import { db } from "../../firebase/EmailFireBase";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 
+
 const EmailList = () => {
   const [emails, setEmails] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -36,6 +37,9 @@ const EmailList = () => {
 
   return (
     <div className="emailList">
+        <Box
+          sx={{backgroundColor:colors.primary[400],height:'100vh'}} 
+        >
       <div className="emailList_settings">
         <Checkbox style={{color:"white"}} />
         <Box display="flex" justifyContent="end" p={2}>
@@ -71,6 +75,7 @@ const EmailList = () => {
           />
         ))}
       </div>
+      </Box>
     </div>
   );
 };

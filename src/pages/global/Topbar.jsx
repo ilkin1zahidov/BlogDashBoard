@@ -29,7 +29,7 @@ const Topbar = () => {
 
 
   return (
-    <Box display="flex" justifyContent="space-between" p={2}>
+    <Box display="flex" justifyContent="space-between" alignItems="center" p={2}>
       {/* SEARCH BAR */}
       <Box
         display="flex"
@@ -43,7 +43,7 @@ const Topbar = () => {
       </Box>
 
       {/* ICONS */}
-      <Box display="flex">
+      <Box display="flex" alignItems="center">
         <IconButton onClick={colorMode.toggleColorMode}>
           {theme.palette.mode === "dark" ? (
             <DarkModeOutlinedIcon />
