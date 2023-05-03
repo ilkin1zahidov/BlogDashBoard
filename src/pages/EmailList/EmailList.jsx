@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../assets/css/emailList.css";
-import { Checkbox, IconButton } from "@mui/material";
+import {  IconButton } from "@mui/material";
 import { Box, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import InputBase from "@mui/material/InputBase";
@@ -41,7 +41,7 @@ const EmailList = () => {
           sx={{backgroundColor:colors.primary[400],height:'100vh'}} 
         >
       <div className="emailList_settings">
-        <Checkbox style={{color:"white"}} />
+          <h2 style={{marginLeft:"12px",fontWeight:"700"}}>Mails</h2>
         <Box display="flex" justifyContent="end" p={2}>
           {/* SEARCH BAR */}
           <Box

@@ -69,7 +69,7 @@ useEffect(() => {
         <SidebarOption
           Icon={MailIcon}
           title="Inbox"
-          number={"(10)"}
+          number={""}
           selected={true}
         />
         <div onClick={StarMail }>
