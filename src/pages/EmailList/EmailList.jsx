@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../assets/css/emailList.css";
-import {  IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import { Box, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import InputBase from "@mui/material/InputBase";
