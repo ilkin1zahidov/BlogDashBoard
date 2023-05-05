@@ -1,15 +1,22 @@
 .emailList{
     width: 100%;
-    height: auto;
+    height: 83vh;
     flex:1;
-    overflow: hidden;
     margin-left: 20px;
+  
     
-    ::-webkit-scrollbar{
-        display: none;
-    }
     .emailList_list{
         padding-bottom: 20%;
+
+        height: calc(100vh - 25vh);
+        overflow: auto;
+    
+        &::-webkit-scrollbar{
+            width:5px;
+            background-color:#000;
+            display: none;
+            }
+      
     }
     .emailList_settings{
         position: sticky;

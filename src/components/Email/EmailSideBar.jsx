@@ -54,7 +54,7 @@ useEffect(() => {
   return (
     <div className="emailSideBar" >
         <Box
-          sx={{backgroundColor:colors.primary[400],height:'100vh'}} 
+          sx={{backgroundColor:colors.primary[400],height:'83vh'}} 
         >
     
       <div className="container">

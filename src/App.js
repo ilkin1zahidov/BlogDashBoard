@@ -7,7 +7,6 @@ import Dashboard from "./pages/dashboard/dashboard";
 import Team from "./pages/team/team";
 import Invoices from "./pages/invoices/invoices";
 import Contacts from "./pages/contacts/contacts";
-import Form from "./pages/form/form";
 import Calendar from "./pages/calendar/calendar";
 import FAQ from "./pages/faq/faq";
 import Bar from "./pages/bar/bar";
@@ -23,8 +22,6 @@ import EmailHome from "./pages/EmailHome/EmailHome";
 import Mail from "./pages/mail/Mail";
 import SendEmail from "./components/Email/SendEmail";
 import StarredMails from "./pages/StarredMails/StarredMails";
-
-
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -47,7 +44,6 @@ function App() {
                <Route path="/team" element={<Team />} />
                <Route path="/contacts" element={<Contacts />} />
                <Route path="/invoices" element={<Invoices />} />
-               <Route path="/form" element={<Form />} />
                <Route path="/calendar" element={<Calendar />} />
                <Route path="/faq" element={<FAQ />} />
                <Route path="/bar" element={<Bar />} />

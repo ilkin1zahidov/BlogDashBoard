@@ -38,7 +38,7 @@ const EmailList = () => {
   return (
     <div className="emailList">
         <Box
-          sx={{backgroundColor:colors.primary[400],height:'100vh'}} 
+          sx={{backgroundColor:colors.primary[400]}} 
         >
       <div className="emailList_settings">
           <h2 style={{marginLeft:"12px",fontWeight:"700"}}>Mails</h2>
