@@ -3,13 +3,16 @@ import Header from "../../components/Common/Header";
 import LineChart from "../../components/Common/LineChart";
 
 const Line = () => {
-    return(
-        <Box m="20px">
-            <Header title="Line Chart" subtitle= "Simple Line Chart" />
-            <Box height="75vh">
-                <LineChart/>
+    return (
+        <div className="lineChart">
+            <Box m="20px">
+                <Header title="Line Chart" subtitle="Simple Line Chart" />
+                <Box height="75vh">
+                    <LineChart />
+                </Box>
             </Box>
-        </Box>
+        </div>
+
     )
 }
 

@@ -3,13 +3,16 @@ import Header from "../../components/Common/Header"
 import PieChart from "../../components/Common/PieChart"
 
 const Pie = () => {
-    return(
-        <Box m="20px" >
-            <Header title= "Pie Chart" subtitle= "Simple Pie Chart" />
-            <Box height="75vh">
-                <PieChart/>
+    return (
+        <div className="pieChart">
+            <Box m="20px" >
+                <Header title="Pie Chart" subtitle="Simple Pie Chart" />
+                <Box height="75vh">
+                    <PieChart />
+                </Box>
             </Box>
-        </Box>
+        </div>
+
     )
 }
 

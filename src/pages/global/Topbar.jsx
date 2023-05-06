@@ -29,7 +29,8 @@ const Topbar = () => {
 
 
   return (
-    <Box display="flex" justifyContent="space-between" alignItems="center" p={2}>
+    <div className="Topbar">
+          <Box display="flex" justifyContent="space-between" alignItems="center" p={2}>
       {/* SEARCH BAR */}
       <Box
         display="flex"
@@ -64,6 +65,8 @@ const Topbar = () => {
         </IconButton>
       </Box>
     </Box>
+    </div>
+  
   );
 };
 
