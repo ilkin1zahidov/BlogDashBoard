@@ -1,6 +1,7 @@
 .email--Home {
   width: 100%;
   height: auto;
+  margin-top: -15px;
 }
 .email--Home .email_Side {
   display: flex;
