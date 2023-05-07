@@ -244,11 +244,14 @@ body {
   align-items: flex-end;
 }
 .chatHome .container .chat .messages .message.owner .messageContent .message_text {
-  background-color: #8da4f1;
+  background-color: #192339;
   color: white;
   border-radius: 10px 0px 10px 10px;
   max-width: -moz-max-content;
   max-width: max-content;
+}
+.chatHome .container .chat .messages .message.owner .messageContent img {
+  width: 50%;
 }
 .chatHome .container .chat .input {
   height: 50px;
