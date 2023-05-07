@@ -29,8 +29,8 @@ const Message = ({ message }) => {
         <span>just now</span>
       </div>
       <div className="messageContent">
-        <p>{message.text}</p>
-        {message.img && <img src={message.img} alt="" />}
+      {message.text && <p>{message.text}</p>}
+      {message.img && <img src={message.img} style={{width:"30px"}} alt="chat_img" />}  
       </div>
     </div>
   );
