@@ -208,7 +208,6 @@ body {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
-  margin: 15px 0px;
 }
 .chatHome .container .chat .messages .message .messageInfo {
   display: flex;

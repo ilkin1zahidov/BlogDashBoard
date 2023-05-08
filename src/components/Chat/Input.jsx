@@ -23,21 +23,26 @@ const Input = () => {
 
   const handleSend = async (e) => {
     e.preventDefault();
+  
+    if (!text && !img) {
+      return;
+    }
+  
     if (img) {
       const storageRef = ref(storage, uuid());
-
+  
       const uploadTask = uploadBytesResumable(storageRef, img);
-
+  
       uploadTask.on(
         (error) => {
           //TODO:Handle Error
         },
         () => {
-          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+          getDownloadURL(storageRef).then(async (downloadURL) => {
             await updateDoc(doc(db, "chats", data.chatId), {
               messages: arrayUnion({
                 id: uuid(),
-                text,
+                text: "",
                 senderId: currentUser.uid,
                 date: Timestamp.now(),
                 img: downloadURL,
@@ -56,24 +61,26 @@ const Input = () => {
         }),
       });
     }
-
+  
     await updateDoc(doc(db, "userChats", currentUser.uid), {
       [data.chatId + ".lastMessage"]: {
-        text,
+        text: img ? "📷 Photo" : text, // Resim yüklendiyse "📷 Photo" yazdır, aksi halde text değerini kullan
       },
       [data.chatId + ".date"]: serverTimestamp(),
     });
-
+  
     await updateDoc(doc(db, "userChats", data.user.uid), {
       [data.chatId + ".lastMessage"]: {
-        text,
+        text: img ? "📷 Photo" : text, // Resim yüklendiyse "📷 Photo" yazdır, aksi halde text değerini kullan
       },
       [data.chatId + ".date"]: serverTimestamp(),
     });
-
+  
     setText("");
     setImg(null);
   };
+  
+  
   return (
     <div className="input">
       <form onSubmit={handleSend}>
@@ -101,4 +108,4 @@ const Input = () => {
   );
 };
 
-export default Input;
+export default Input
