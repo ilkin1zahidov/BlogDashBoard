@@ -42,7 +42,7 @@ const Input = () => {
             await updateDoc(doc(db, "chats", data.chatId), {
               messages: arrayUnion({
                 id: uuid(),
-                text: "",
+                text,
                 senderId: currentUser.uid,
                 date: Timestamp.now(),
                 img: downloadURL,
@@ -64,14 +64,7 @@ const Input = () => {
   
     await updateDoc(doc(db, "userChats", currentUser.uid), {
       [data.chatId + ".lastMessage"]: {
-        text: img ? "📷 Photo" : text, // Resim yüklendiyse "📷 Photo" yazdır, aksi halde text değerini kullan
-      },
-      [data.chatId + ".date"]: serverTimestamp(),
-    });
-  
-    await updateDoc(doc(db, "userChats", data.user.uid), {
-      [data.chatId + ".lastMessage"]: {
-        text: img ? "📷 Photo" : text, // Resim yüklendiyse "📷 Photo" yazdır, aksi halde text değerini kullan
+        text: img ? "📷 Photo" : text, 
       },
       [data.chatId + ".date"]: serverTimestamp(),
     });
@@ -79,6 +72,7 @@ const Input = () => {
     setText("");
     setImg(null);
   };
+  
   
   
   return (
@@ -101,7 +95,7 @@ const Input = () => {
         <label htmlFor="file">
           <img src={Img} alt="" />
         </label>
-        <button >Send</button>
+        <button>Send</button>
       </div>
       </form>
     </div>

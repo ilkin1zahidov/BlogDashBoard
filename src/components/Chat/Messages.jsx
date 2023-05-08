@@ -21,18 +21,15 @@ const Messages = () => {
   }, [data.chatId])
   return (
     <Box
-        sx={{ backgroundColor: colors.primary[400], height: '70vh' }}
-      >
-    <div className='messages'>
-      
-
+      sx={{ backgroundColor: colors.primary[400], height: '70vh' }}
+    >
+      <div className='messages'>
 
         {messages.map((m) => (
           <Message message={m} key={m.id} />
         ))}
 
-    
-    </div>
+      </div>
     </Box>
   )
 }
