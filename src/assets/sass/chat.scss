@@ -274,12 +274,13 @@ body{
                         }
                         img{
                             width: 50%;
+
                         }
                     }
 
                     &.owner{
                         flex-direction: row-reverse;
-                        margin: 15px 0px;
+                     
                         .messageContent{
                             align-items: flex-end;
                            
@@ -289,9 +290,7 @@ body{
                                 border-radius: 10px 0px 10px 10px;
                                 max-width: max-content;
                             }
-                            img{
-                                width: 50%;
-                            }
+                          
 
                         }
                     }

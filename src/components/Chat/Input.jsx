@@ -69,10 +69,16 @@ const Input = () => {
       [data.chatId + ".date"]: serverTimestamp(),
     });
   
+    await updateDoc(doc(db, "userChats", data.user.uid), {
+      [data.chatId + ".lastMessage"]: {
+        text: img ? "📷 Photo" : text, 
+      },
+      [data.chatId + ".date"]: serverTimestamp(),
+    });
+  
     setText("");
     setImg(null);
   };
-  
   
   
   return (
@@ -95,7 +101,7 @@ const Input = () => {
         <label htmlFor="file">
           <img src={Img} alt="" />
         </label>
-        <button>Send</button>
+        <button >Send</button>
       </div>
       </form>
     </div>

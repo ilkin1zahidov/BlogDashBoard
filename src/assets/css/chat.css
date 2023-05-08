@@ -239,7 +239,6 @@ body {
 }
 .chatHome .container .chat .messages .message.owner {
   flex-direction: row-reverse;
-  margin: 15px 0px;
 }
 .chatHome .container .chat .messages .message.owner .messageContent {
   align-items: flex-end;
@@ -250,9 +249,6 @@ body {
   border-radius: 10px 0px 10px 10px;
   max-width: -moz-max-content;
   max-width: max-content;
-}
-.chatHome .container .chat .messages .message.owner .messageContent img {
-  width: 50%;
 }
 .chatHome .container .chat .input {
   height: 50px;
