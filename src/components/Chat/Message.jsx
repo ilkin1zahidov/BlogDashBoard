@@ -13,27 +13,30 @@ const Message = ({ message }) => {
   }, [message]);
 
   return (
-    <div
-      ref={ref}
-      className={`message ${message.senderId === currentUser.uid && "owner"}`}
-    >
-      <div className="messageInfo">
-        <img
-          src={
-            message.senderId === currentUser.uid
-              ? currentUser.photoURL
-              : data.user.photoURL
-          }
-          alt=""
-        />
-        <span>just now</span>
+    message && (
+      <div
+        ref={ref}
+        className={`message ${message.senderId === currentUser.uid && "owner"}`}
+      >
+        <div className="messageInfo">
+          <img
+            src={
+              message.senderId === currentUser.uid
+                ? currentUser.photoURL
+                : data.user.photoURL
+            }
+            alt=""
+          />
+          <span>just now</span>
+        </div>
+        <div className="messageContent">
+          <p className="message_text">{message.text}</p>
+          {message.img && <img src={message.img} alt="chat_img" />}
+        </div>
       </div>
-      <div className="messageContent">
-      {message.text && <p className="message_text">{message.text}</p>}
-      {message.img && <img src={message.img}  alt="chat_img" />}  
-      </div>
-    </div>
+    )
   );
 };
+
 
 export default Message;

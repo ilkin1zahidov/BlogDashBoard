@@ -20,19 +20,20 @@ const Messages = () => {
     }
   }, [data.chatId])
   return (
-
-    <div className='messages'>
-      <Box
-        sx={{ backgroundColor: colors.primary[400], height: 'auto' }}
+    <Box
+        sx={{ backgroundColor: colors.primary[400], height: '70vh' }}
       >
+    <div className='messages'>
+      
 
 
         {messages.map((m) => (
           <Message message={m} key={m.id} />
         ))}
 
-      </Box>
+    
     </div>
+    </Box>
   )
 }
 export default Messages

@@ -197,7 +197,7 @@ body {
   cursor: pointer;
 }
 .chatHome .container .chat .messages {
-  height: calc(100% - 160px);
+  height: calc(100% - 0px);
   overflow: auto;
 }
 .chatHome .container .chat .messages::-webkit-scrollbar {
@@ -208,6 +208,7 @@ body {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
+  margin: 15px 0px;
 }
 .chatHome .container .chat .messages .message .messageInfo {
   display: flex;
@@ -239,6 +240,7 @@ body {
 }
 .chatHome .container .chat .messages .message.owner {
   flex-direction: row-reverse;
+  margin: 15px 0px;
 }
 .chatHome .container .chat .messages .message.owner .messageContent {
   align-items: flex-end;
