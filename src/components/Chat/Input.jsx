@@ -42,7 +42,7 @@ const Input = () => {
             await updateDoc(doc(db, "chats", data.chatId), {
               messages: arrayUnion({
                 id: uuid(),
-                text,
+                text:"image",
                 senderId: currentUser.uid,
                 date: Timestamp.now(),
                 img: downloadURL,

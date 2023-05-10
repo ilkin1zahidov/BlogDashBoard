@@ -233,6 +233,8 @@ body {
   background-color: white;
   padding: 10px 20px;
   border-radius: 0px 10px 10px 10px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 .chatHome .container .chat .messages .message .messageContent img {
   width: 50%;
