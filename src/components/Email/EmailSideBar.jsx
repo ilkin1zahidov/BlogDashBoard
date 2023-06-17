@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Button } from "@mui/material";
 import { doc, onSnapshot } from "firebase/firestore";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "../../assets/css/emailSideBar.css";
 import SidebarOption from "./SidebarOption";
 import MailIcon from "@mui/icons-material/Mail";
@@ -10,10 +10,10 @@ import DiamondIcon from "@mui/icons-material/Diamond";
 import MarkEmailReadIcon from "@mui/icons-material/MarkEmailRead";
 import NoteIcon from "@mui/icons-material/Note";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { openSendMessage } from "../../control/mailSlice";
+import { openSendMessage, selectInboxCount } from "../../control/mailSlice";
 import { AuthContext } from "../../context/AuthContext";
 import { ChatContext } from "../../context/ChatContext";
-import { db } from "../../firebase/ChatFirebase";
+import { db } from "../../firebase/EmailFireBase";
 import { useNavigate } from "react-router-dom";
 import { Box, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
@@ -50,6 +50,8 @@ useEffect(() => {
   const StarMail = () => {
     navigate("/StarMail")
   }
+  const inboxCount = useSelector(selectInboxCount); // Inbox sayısını al
+  
 
   return (
     <div className="emailSideBar" >
@@ -61,7 +63,10 @@ useEffect(() => {
         
         <Button
           className="sidebar_compose"
-          onClick={() => dispatch(openSendMessage())}
+          onClick={() => { 
+            dispatch(openSendMessage());
+     
+          }}
         >
     
           Compose
@@ -69,9 +74,11 @@ useEffect(() => {
         <SidebarOption
           Icon={MailIcon}
           title="Inbox"
-          number={""}
+          number={(inboxCount)}
+          
           selected={true}
         />
+        
         <div onClick={StarMail }>
         <SidebarOption Icon={StarIcon} title="Starred" number={54} />
         </div>
