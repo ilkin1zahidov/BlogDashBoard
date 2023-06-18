@@ -54,7 +54,7 @@ const EmailRow = ({ id, title, subject, description, time }) => {
   };
 
   return (
-    <div key={id} onClick = {openMail} className="emailRow">
+    <div  onClick = {openMail} className="emailRow">
       <div className="emailRow_options">
         <Checkbox style={{color:"white"}} />
         <IconButton  onClick={handleStarClick}>
