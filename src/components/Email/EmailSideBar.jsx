@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Button } from "@mui/material";
 import { doc, onSnapshot } from "firebase/firestore";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import "../../assets/css/emailSideBar.css";
 import SidebarOption from "./SidebarOption";
 import MailIcon from "@mui/icons-material/Mail";
@@ -10,7 +10,7 @@ import DiamondIcon from "@mui/icons-material/Diamond";
 import MarkEmailReadIcon from "@mui/icons-material/MarkEmailRead";
 import NoteIcon from "@mui/icons-material/Note";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { openSendMessage, selectInboxCount } from "../../control/mailSlice";
+import { openSendMessage } from "../../control/mailSlice";
 import { AuthContext } from "../../context/AuthContext";
 import { ChatContext } from "../../context/ChatContext";
 import { db } from "../../firebase/EmailFireBase";
@@ -50,7 +50,7 @@ useEffect(() => {
   const StarMail = () => {
     navigate("/StarMail")
   }
-  const inboxCount = useSelector(selectInboxCount); // Inbox sayısını al
+
   
 
   return (
@@ -74,7 +74,7 @@ useEffect(() => {
         <SidebarOption
           Icon={MailIcon}
           title="Inbox"
-          number={(inboxCount)}
+          number={""}
           
           selected={true}
         />

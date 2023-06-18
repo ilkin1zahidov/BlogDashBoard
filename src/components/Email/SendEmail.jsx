@@ -4,7 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { closeSendMessage, incrementInboxCount } from "../../control/mailSlice";
+import { closeSendMessage } from "../../control/mailSlice";
 import { collection, addDoc, serverTimestamp,  } from 'firebase/firestore';
 import { db } from "../../firebase/EmailFireBase";
 
@@ -44,12 +44,6 @@ const SendEmail = () => {
     message:{required:"Message is required"},
   };
 
-  const handleSend =  () => {
-    
-      dispatch(incrementInboxCount()) ;
- 
-
-  }
 
   return (
     <div className="sendMail">
@@ -96,7 +90,7 @@ const SendEmail = () => {
             variant="contained"
             color="primary"
             type="submit"
-            onClick={handleSend}
+     
        
           >
             Send
