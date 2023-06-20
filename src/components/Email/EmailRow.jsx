@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { selectMail } from "../../control/mailSlice";
 import StarIcon from "@mui/icons-material/Star";
-import { useState, useEffect } from "react"; // useEffect import edildi
+import { useState, useEffect } from "react"; 
 
 const EmailRow = ({ id, title, subject, description, time }) => {
   const navigate = useNavigate();
