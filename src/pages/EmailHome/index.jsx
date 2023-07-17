@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import EmailHeader from "../../components/Email/EmailHeader"
 import EmailSideBar from '../../components/Email/EmailSideBar';
-import EmailList from '../EmailList/EmailList';
+import EmailList from '../EmailList';
 import "../../assets/css/emailHome.css";
 import SendEmail from '../../components/Email/SendEmail';
 import { useDispatch, useSelector } from "react-redux";
-import EmailLogin from '../EmailLogin/EmailLogin';
+import EmailLogin from '../EmailLogin';
 import { login } from '../../control/userSlice';
 import { auth } from '../../firebase/EmailFireBase';
 const EmailHome = () => {
