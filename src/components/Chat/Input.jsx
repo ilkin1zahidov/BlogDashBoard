@@ -24,7 +24,7 @@ const Input = () => {
   const handleSend = async (e) => {
     e.preventDefault();
   
-    if (!text && !img) {
+    if (!text.trim() && !img) {
       return;
     }
   

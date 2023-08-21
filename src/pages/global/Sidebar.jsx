@@ -16,7 +16,7 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import pageLogo from "../../assets/img/skote.png";
-import User from "../../assets/img/user.png";
+import User from "../../assets/img/proo.jpeg";
 import ChatIcon from '@mui/icons-material/Chat';
 import EmailIcon from '@mui/icons-material/Email';
 const Item = ({ title, to, icon, selected, setSelected }) => {
