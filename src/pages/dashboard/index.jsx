@@ -256,7 +256,7 @@ const Dashboard = () => {
           >
             Sales Quantity
           </Typography>
-          <Box height="250px" mt="-20px">
+          <Box height="250px" mt="-20px" color="#000000">
             <BarChart isDashboard={true} />
           </Box>
         </Box>
@@ -273,7 +273,7 @@ const Dashboard = () => {
           >
             Geography Based Traffic
           </Typography>
-          <Box height="200px">
+          <Box height="200px" color="#000000">
             <GeographyChart isDashboard={true} />
           </Box>
         </Box>
